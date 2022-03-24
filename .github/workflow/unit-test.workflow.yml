@@ -4,9 +4,17 @@ jobs:
   JobDeTests-Un:
     runs-on: ubuntu-latest
     steps: 
-      - name: Mon étape une
+      - name: Github
         run: echo "Salut"
-      - name: Mon étape 2
+      - name: Job
+        run: echo '${{ toJSON-github }}'
+      - name: Steps
+        run: echo "Salut"
+      - name: Runner
+        run: echo '${{ toJSON-github }}'
+      - name: Strategy
+        run: echo '${{ toJSON-github }}'
+      - name: Matrix
         run: echo '${{ toJSON-github }}'
 
   
