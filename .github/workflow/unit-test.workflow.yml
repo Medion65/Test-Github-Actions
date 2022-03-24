@@ -2,7 +2,7 @@ name: Réalisation des tests unitaires
 on: [push]
 jobs: 
   JobDeTests-Un:
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
     steps: 
       - name: Mon étape une
         run: echo "Salut"
