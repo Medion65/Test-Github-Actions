@@ -9,4 +9,6 @@ jobs:
       - name: Mon étape 2
         run: 
           ls ${{ github.workspace }}
-          echo ${{ github }}
+          echo ${{ toJSON-github }}
+
+  
