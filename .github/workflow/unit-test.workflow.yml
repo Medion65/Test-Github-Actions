@@ -5,16 +5,16 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Github
-        run: echo "Salut"
+        run: echo '${{ toJSON(github) }}'
       - name: Job
-        run: echo '${{ toJSON-github }}'
+        run: echo '${{ toJSON(job) }}'
       - name: Steps
-        run: echo "Salut"
+        run: echo '${{ toJSON(steps) }}'
       - name: Runner
-        run: echo '${{ toJSON-github }}'
+        run: echo '${{ toJSON(runner) }}'
       - name: Strategy
-        run: echo '${{ toJSON-github }}'
+        run: echo '${{ toJSON(strategy) }}'
       - name: Matrix
-        run: echo '${{ toJSON-github }}'
+        run: echo '${{ toJSON(matrix) }}'
 
   
