@@ -5,25 +5,14 @@ env:
   DAY_OF_WEEK: Monday
 
 jobs: 
-  Bonjour:
-    runs-on: ubuntu-latest
-    env:
-      GREETING: Bonjour
+  ifWindows:
+    runs-on: macos-latest
     steps: 
-      - name: Dire bonjour à Jean-Michel
-        run: echo "$GREETING $NAME, on est $DAY_OF_WEEK"
-        env: 
-          NAME: JeanMich
-      - name: Dire bonjour à Jean-Michel
-        run: echo "$GREETING $NAME, on est $DAY_OF_WEEK"
-        env:
-          NAME: Toto
-  Aurevoir:
-    runs-on: ubuntu-latest
-    env: 
-      GREETING: Aurevoir
-    steps:
-      - name: Dire Aurevoir
-        run: echo "$GREETING, on est $DAY_OF_WEEK"
-
+      - name: IF Windows
+        if: runner.os == "Windows"
+        run: echo "L'os présent sur le runner est ${{ runner.os }}"
+      - name: IF not Windows
+        if: runner.is != "Windows"
+        run: echo "L'os présent sur le runner est ${{ runner.os }}"
+  
   
