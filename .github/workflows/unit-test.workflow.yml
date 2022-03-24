@@ -3,7 +3,8 @@ name: Réalisation des tests unitaires
 
 on: 
   pull_request:
-    types: [closed]
+    branches:
+      - main
 
 jobs: 
   ifWindows:
