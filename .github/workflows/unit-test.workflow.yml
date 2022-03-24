@@ -10,6 +10,6 @@ jobs:
     runs-on: macos-latest
     steps: 
       - name: IF Windows
-        run: echo "L'os présent sur le runner est ${{ runner.os }}"
+        run: echo "Pull request fermée"
 
   
