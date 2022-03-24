@@ -5,10 +5,25 @@ env:
   DAY_OF_WEEK: Monday
 
 jobs: 
-  JobDeTests-Un:
+  Bonjour:
     runs-on: ubuntu-latest
+    env:
+      GREETING: Bonjour
     steps: 
-      - name: Dire bonjour
-        run: echo "bonjout, on est $DAY_OF_WEEK"
+      - name: Dire bonjour à Jean-Michel
+        run: echo "$GREETING $NAME, on est $DAY_OF_WEEK"
+        env: 
+          NAME: JeanMich
+      - name: Dire bonjour à Jean-Michel
+        run: echo "$GREETING $NAME, on est $DAY_OF_WEEK"
+        env:
+          NAME: Toto
+  Aurevoir:
+    runs-on: ubuntu-latest
+    env: 
+      GREETING: Aurevoir
+    steps:
+      - name: Dire Aurevoir
+        run: echo "$GREETING, on est $DAY_OF_WEEK"
 
   
