@@ -1,8 +1,5 @@
 name: Réalisation des tests unitaires
-on: [push]
-
-env: 
-  DAY_OF_WEEK: Monday
+on: [pull_request]
 
 jobs: 
   ifWindows:
@@ -11,7 +8,5 @@ jobs:
       - name: IF Windows
         if: runner.os == 'Windows'
         run: echo "L'os présent sur le runner est ${{ runner.os }}"
-      - name: IF not Windows
-        if: runner.is != 'Windows'
-        run: echo "L'os présent sur le runner est ${{ runner.os }}"
+
   
