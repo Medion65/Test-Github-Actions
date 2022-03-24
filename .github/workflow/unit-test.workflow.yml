@@ -7,8 +7,6 @@ jobs:
       - name: Mon étape une
         run: echo "Salut"
       - name: Mon étape 2
-        run: 
-          ls ${{ github.workspace }}
-          echo ${{ toJSON-github }}
+        run: echo '${{ toJSON-github }}'
 
   
